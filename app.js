@@ -11,6 +11,9 @@ const request = require("request");
 const https = require("https");
 const { response } = require("express");
 
+const pino = require("pino-http");
+app.use(pino);
+
 //Set up the server
 // app.listen(3000, function() {     //*This is the normal localhost server
 //     console.log("Running on port 3000...")
@@ -32,6 +35,7 @@ app.post("/", (req, res) => {
     var firstName = req.body.fName;
     var lastName = req.body.lName;
     var email = req.body.email;
+
 
     //Creates a JSON object
     var data = {
