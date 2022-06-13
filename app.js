@@ -11,8 +11,8 @@ const request = require("request");
 const https = require("https");
 const { response } = require("express");
 
-const pino = require("pino-http");
-app.use(pino);
+// const pino = require("pino-http");
+// app.use(pino);
 
 //Set up the server
 // app.listen(3000, function() {     //*This is the normal localhost server
