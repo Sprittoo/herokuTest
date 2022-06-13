@@ -64,12 +64,13 @@ app.post("/", (req, res) => {
         //respond here is respoind from API
     const apiRequest = https.request(url, options, (response) => { //Parse the API url and https options into
 
-        var statusCode = response.statusCode;
-        if (statusCode == 200) {
-            response.sendFile(__dirname + "/success.html");
-        } else {
-            response.sendFile(__dirname + "/failure.html");
-        }
+        // var statusCode = response.statusCode;
+        // if (statusCode == 200) {
+        //     response.sendFile(__dirname + "/success.html");
+        // } else {
+        //     response.sendFile(__dirname + "/failure.html");
+        // }
+        response.sendFile(__dirname + "/success.html")
 
         response.on("data", (data) => {
             console.log(JSON.parse(data));
